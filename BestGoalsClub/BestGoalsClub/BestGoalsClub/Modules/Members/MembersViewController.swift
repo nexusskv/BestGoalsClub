@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  MembersViewController.swift
 //  BestGoalsClub
 //
 //  Created by Rost on 09.12.2019.
@@ -8,8 +8,10 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
-
+class MembersViewController: UIViewController {
+    var dataArray: [MemberObject]!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
