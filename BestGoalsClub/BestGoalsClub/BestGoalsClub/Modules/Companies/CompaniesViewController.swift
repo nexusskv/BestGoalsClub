@@ -13,6 +13,7 @@ class CompaniesViewController: UIViewController {
     @IBOutlet weak var companiesTable: UITableView!
     @IBOutlet weak var sortView: SortCompaniesView!
     var dataArray: [CompanyObject] = []
+    var originalDataArray: [CompanyObject] = []
     var selectedSortType: CompaniesSortTypes = .none
     
     

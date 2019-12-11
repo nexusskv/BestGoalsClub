@@ -21,7 +21,9 @@ extension CompaniesViewController {
             
             if result is [CompanyObject] {
                 if let companies = result as? [CompanyObject] {
-                    strongSelf.dataArray = companies
+                    strongSelf.dataArray            = companies
+                    strongSelf.originalDataArray    = companies
+                    
                     strongSelf.companiesTable.reloadData()
                                         
                     strongSelf.makeMembersArray()

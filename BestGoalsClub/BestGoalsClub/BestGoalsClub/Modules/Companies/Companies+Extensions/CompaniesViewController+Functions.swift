@@ -93,4 +93,14 @@ extension CompaniesViewController {
         
         companiesTable.reloadData()
     }
+    
+    func restoreAllCompanies() {
+        dataArray = originalDataArray
+        
+        if selectedSortType != .none {
+            sortCompanies(selectedSortType)
+        }
+        
+        companiesTable.reloadData()
+    }
 }

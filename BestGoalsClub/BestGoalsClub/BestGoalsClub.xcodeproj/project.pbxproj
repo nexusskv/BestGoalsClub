@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1119FC6823A07DC8008A039F /* SortCompaniesView+Checkmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1119FC6723A07DC8008A039F /* SortCompaniesView+Checkmarks.swift */; };
+		1135CC2423A11FA40045107B /* CompaniesViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135CC2323A11FA40045107B /* CompaniesViewController+Search.swift */; };
 		11547241239E5E1300B18750 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11547240239E5E1300B18750 /* AppDelegate.swift */; };
 		11547243239E5E1300B18750 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11547242239E5E1300B18750 /* SceneDelegate.swift */; };
 		11547245239E5E1300B18750 /* CompaniesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11547244239E5E1300B18750 /* CompaniesViewController.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		1119FC6723A07DC8008A039F /* SortCompaniesView+Checkmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SortCompaniesView+Checkmarks.swift"; sourceTree = "<group>"; };
+		1135CC2323A11FA40045107B /* CompaniesViewController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompaniesViewController+Search.swift"; sourceTree = "<group>"; };
 		1154723D239E5E1300B18750 /* BestGoalsClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestGoalsClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11547240239E5E1300B18750 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		11547242239E5E1300B18750 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../SceneDelegate.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				11E87D44239F22A4009F7F9C /* CompaniesViewController+Actions.swift */,
 				11E87D46239F22C8009F7F9C /* CompaniesViewController+Table.swift */,
 				11AC5D5D239FD4230091C2D7 /* CompaniesViewController+Endpoints.swift */,
+				1135CC2323A11FA40045107B /* CompaniesViewController+Search.swift */,
 			);
 			path = "Companies+Extensions";
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				11E87D26239EFFA2009F7F9C /* Constants.swift in Sources */,
 				11E87D43239F2135009F7F9C /* AsyncImageView.swift in Sources */,
 				11AC5D7023A00E4C0091C2D7 /* ButtonStateChanger.swift in Sources */,
+				1135CC2423A11FA40045107B /* CompaniesViewController+Search.swift in Sources */,
 				11E87D34239F1856009F7F9C /* JsonHandler.swift in Sources */,
 				11E87D39239F1DA6009F7F9C /* CompanyCell.swift in Sources */,
 				11AC5D5A239FC2250091C2D7 /* DataContainer.swift in Sources */,
