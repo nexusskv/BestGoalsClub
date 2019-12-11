@@ -11,12 +11,6 @@ import UIKit
 
 
 class SortMembersView: UIView {
-    @IBOutlet weak var ageAscButton: UIButton!
-    @IBOutlet weak var ageDescButton: UIButton!
-    @IBOutlet weak var nameAscButton: UIButton!
-    @IBOutlet weak var nameDescButton: UIButton!
-    @IBOutlet weak var familyNameAscButton: UIButton!
-    @IBOutlet weak var familyNameDescButton: UIButton!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var okButton: UIButton!
     

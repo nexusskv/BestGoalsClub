@@ -13,8 +13,9 @@ import UIKit
 extension SortMembersView {
     
     func cleanCheckmarks() {
-        let buttons = [ageAscButton, ageDescButton, nameAscButton, nameDescButton]
-        ButtonStateChanger.shared.cleanCheckmarks(buttons as! [UIButton])
+        let tags: [Int] = [MembersSortTypes.ageAsc.rawValue, MembersSortTypes.ageDesc.rawValue, MembersSortTypes.nameAsc.rawValue, MembersSortTypes.nameDesc.rawValue, MembersSortTypes.lastNameAsc.rawValue, MembersSortTypes.lastNameDesc.rawValue]
+                
+        ButtonStateChanger.shared.cleanCheckmarks(tags, on: self)
     }
     
     func addCheckmarks(_ type: MembersSortTypes) {

@@ -13,8 +13,8 @@ import UIKit
 extension SortCompaniesView {
     
     func cleanCheckmarks() {
-        let buttons = [ascButton, descButton]
-        ButtonStateChanger.shared.cleanCheckmarks(buttons as! [UIButton])
+        let tags: [Int] = [CompaniesSortTypes.asc.rawValue, CompaniesSortTypes.desc.rawValue]
+        ButtonStateChanger.shared.cleanCheckmarks(tags, on: self)
     }
 
     

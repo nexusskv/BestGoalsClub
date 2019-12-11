@@ -11,6 +11,9 @@
 		1135CC2423A11FA40045107B /* CompaniesViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135CC2323A11FA40045107B /* CompaniesViewController+Search.swift */; };
 		1135CC2723A145070045107B /* SortMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135CC2623A145070045107B /* SortMembersView.swift */; };
 		1135CC2923A145300045107B /* SortMembersView+Checkmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135CC2823A145300045107B /* SortMembersView+Checkmarks.swift */; };
+		1135CC2B23A16A2C0045107B /* CompaniesViewController+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135CC2A23A16A2C0045107B /* CompaniesViewController+Sort.swift */; };
+		1135CC2D23A16A8C0045107B /* MembersViewController+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135CC2C23A16A8C0045107B /* MembersViewController+Sort.swift */; };
+		1135CC2F23A1750A0045107B /* MembersViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135CC2E23A1750A0045107B /* MembersViewController+Search.swift */; };
 		11547241239E5E1300B18750 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11547240239E5E1300B18750 /* AppDelegate.swift */; };
 		11547243239E5E1300B18750 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11547242239E5E1300B18750 /* SceneDelegate.swift */; };
 		11547245239E5E1300B18750 /* CompaniesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11547244239E5E1300B18750 /* CompaniesViewController.swift */; };
@@ -49,6 +52,9 @@
 		1135CC2323A11FA40045107B /* CompaniesViewController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompaniesViewController+Search.swift"; sourceTree = "<group>"; };
 		1135CC2623A145070045107B /* SortMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortMembersView.swift; sourceTree = "<group>"; };
 		1135CC2823A145300045107B /* SortMembersView+Checkmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SortMembersView+Checkmarks.swift"; sourceTree = "<group>"; };
+		1135CC2A23A16A2C0045107B /* CompaniesViewController+Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompaniesViewController+Sort.swift"; sourceTree = "<group>"; };
+		1135CC2C23A16A8C0045107B /* MembersViewController+Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MembersViewController+Sort.swift"; sourceTree = "<group>"; };
+		1135CC2E23A1750A0045107B /* MembersViewController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MembersViewController+Search.swift"; sourceTree = "<group>"; };
 		1154723D239E5E1300B18750 /* BestGoalsClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestGoalsClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11547240239E5E1300B18750 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		11547242239E5E1300B18750 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../SceneDelegate.swift; sourceTree = "<group>"; };
@@ -295,6 +301,7 @@
 				11E87D46239F22C8009F7F9C /* CompaniesViewController+Table.swift */,
 				11AC5D5D239FD4230091C2D7 /* CompaniesViewController+Endpoints.swift */,
 				1135CC2323A11FA40045107B /* CompaniesViewController+Search.swift */,
+				1135CC2A23A16A2C0045107B /* CompaniesViewController+Sort.swift */,
 			);
 			path = "Companies+Extensions";
 			sourceTree = "<group>";
@@ -338,6 +345,8 @@
 				11AC5D68239FF61C0091C2D7 /* MembersViewController+Functions.swift */,
 				11E87D4E239F255A009F7F9C /* MembersViewController+Actions.swift */,
 				11E87D50239F256E009F7F9C /* MembersViewController+Table.swift */,
+				1135CC2C23A16A8C0045107B /* MembersViewController+Sort.swift */,
+				1135CC2E23A1750A0045107B /* MembersViewController+Search.swift */,
 			);
 			path = "Members+Extensions";
 			sourceTree = "<group>";
@@ -484,6 +493,7 @@
 				11E87D26239EFFA2009F7F9C /* Constants.swift in Sources */,
 				11E87D43239F2135009F7F9C /* AsyncImageView.swift in Sources */,
 				11AC5D7023A00E4C0091C2D7 /* ButtonStateChanger.swift in Sources */,
+				1135CC2B23A16A2C0045107B /* CompaniesViewController+Sort.swift in Sources */,
 				1135CC2423A11FA40045107B /* CompaniesViewController+Search.swift in Sources */,
 				11E87D34239F1856009F7F9C /* JsonHandler.swift in Sources */,
 				11E87D39239F1DA6009F7F9C /* CompanyCell.swift in Sources */,
@@ -504,7 +514,9 @@
 				11547241239E5E1300B18750 /* AppDelegate.swift in Sources */,
 				11AC5D5C239FC4E30091C2D7 /* Enums.swift in Sources */,
 				11AC5D7423A00FC50091C2D7 /* MemberObject+Decodable.swift in Sources */,
+				1135CC2D23A16A8C0045107B /* MembersViewController+Sort.swift in Sources */,
 				11547243239E5E1300B18750 /* SceneDelegate.swift in Sources */,
+				1135CC2F23A1750A0045107B /* MembersViewController+Search.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

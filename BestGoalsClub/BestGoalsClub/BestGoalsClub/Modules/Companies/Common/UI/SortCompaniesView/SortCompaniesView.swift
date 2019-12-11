@@ -11,8 +11,6 @@ import UIKit
 
 
 class SortCompaniesView: UIView {
-    @IBOutlet weak var ascButton: UIButton!
-    @IBOutlet weak var descButton: UIButton!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var okButton: UIButton!
     

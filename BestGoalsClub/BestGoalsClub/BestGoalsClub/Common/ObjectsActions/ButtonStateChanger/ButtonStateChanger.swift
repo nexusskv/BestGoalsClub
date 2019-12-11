@@ -22,10 +22,13 @@ class ButtonStateChanger {
         }
     }
     
-    func cleanCheckmarks(_ buttons: [UIButton]) {
-        for button in buttons {
-            button.setBackgroundImage(UIImage(named: "no_checkmark_icon"), for: .normal)
+    func cleanCheckmarks(_ tags: [Int], on view: UIView) {
+        for tag in tags {
+            if let button = view.viewWithTag(tag) as? UIButton {
+                button.setBackgroundImage(UIImage(named: "no_checkmark_icon"), for: .normal)
+            }
         }
+
     }
     
     func addSortCheckmark(_ view: UIView, type: Int) {
