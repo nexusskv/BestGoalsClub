@@ -19,15 +19,21 @@ extension CompaniesViewController {
     }
     
     func changeCompanyParams(_ index: Int, by type: CompanyObjectTypes) {
-        var company = dataArray[index]
+        var object = dataArray[index]
         switch type {
             case .favourite:
-                company.isFavorite = !company.isFavorite
+                object.isFavorite = !object.isFavorite
             case .follower:
-                company.followers += 1
+                if object.followers == 0 {
+                    object.followers += 1
+                }
         }
         
-        dataArray[index] = company
+        dataArray[index] = object
+        
+        if let index = originalDataArray.firstIndex(where: { $0.company == object.company }) {
+            originalDataArray[index] = object
+        }
         
         companiesTable.reloadData()
     }
