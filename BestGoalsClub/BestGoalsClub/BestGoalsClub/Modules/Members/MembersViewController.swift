@@ -9,12 +9,14 @@
 import UIKit
 
 class MembersViewController: UIViewController {
-    var dataArray: [MemberObject]!
+    @IBOutlet weak var membersTable: UITableView!
+    var dataArray: [MemberObject] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        setupUI()
     }
 
 

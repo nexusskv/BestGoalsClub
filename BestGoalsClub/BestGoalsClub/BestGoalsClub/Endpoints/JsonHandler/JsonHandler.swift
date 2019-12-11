@@ -14,10 +14,10 @@ class JsonHandler {
     /// ---> Function for handle received data <--- ///
     static func handleData(_ sender: Data) -> AnyObject {
         do {
-            let json = try JSONSerialization.jsonObject(with: sender, options: .allowFragments) as? [[String: AnyObject]]
+            let companies = try JSONDecoder().decode([CompanyObject].self, from: sender)
             
-            if let array = json {
-                return array as AnyObject
+            if companies.count > 0 {
+                return companies as AnyObject
             } else {
                 return "Serialization error" as AnyObject
             }

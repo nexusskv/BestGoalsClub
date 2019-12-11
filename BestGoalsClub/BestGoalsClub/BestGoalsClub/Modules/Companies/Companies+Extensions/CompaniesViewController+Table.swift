@@ -16,15 +16,14 @@ extension CompaniesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CompanyCell", for: indexPath) as? CompanyCell
         
-        let company: CompanyObject = dataArray[indexPath.row]
-        
-        cell?.setCellValues(company)
+        let company: CompanyObject = dataArray[indexPath.row]        
+        cell?.setCellValues(company, index: indexPath.row)
 
         return cell ?? CompanyCell()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.dataArray.count
+        return dataArray.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

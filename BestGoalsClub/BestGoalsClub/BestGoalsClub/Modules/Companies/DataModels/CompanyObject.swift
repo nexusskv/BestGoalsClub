@@ -15,5 +15,7 @@ struct CompanyObject {
     var website         = ""
     var logo            = ""
     var about           = ""
-    var members         = [[String: Any]]()
+    var members         = [MemberObject]()
+    var isFavorite      = false
+    var followers       = 0
 }

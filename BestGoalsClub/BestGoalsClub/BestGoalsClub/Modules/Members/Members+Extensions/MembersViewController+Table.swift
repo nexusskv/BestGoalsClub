@@ -18,13 +18,13 @@ extension MembersViewController: UITableViewDataSource, UITableViewDelegate {
         
         let member: MemberObject = dataArray[indexPath.row]
         
-        cell?.setCellValues(member)
+        cell?.setCellValues(member, index: indexPath.row)
 
         return cell ?? MemberCell()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.dataArray.count
+        return dataArray.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

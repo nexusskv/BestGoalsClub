@@ -13,7 +13,8 @@ struct MemberObject {
     var objectId        = ""
     var firstName       = ""
     var lastName        = ""
-    var age             = ""
+    var age             = 0
     var email           = ""
     var phone           = ""
+    var isFavorite      = false
 }

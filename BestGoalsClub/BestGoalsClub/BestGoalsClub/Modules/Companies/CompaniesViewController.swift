@@ -9,23 +9,20 @@
 import UIKit
 
 class CompaniesViewController: UIViewController {
-    var dataArray: [CompanyObject]!
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet weak var companiesTable: UITableView!
+    @IBOutlet weak var sortView: SortCompaniesView!
+    var dataArray: [CompanyObject] = []
+    var selectedSortType: CompaniesSortTypes = .none
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        GetListData.loadList(dataUrl, completion: { [weak self] result in
-            guard let strongSelf = self else {
-              return
-            }
-            
-            if result is [[String: Any]] {
-                strongSelf.dataArray = result as? [CompanyObject]
-            } else {
-                // add show alert here
-            }
-        })
+        setupUI()
+        
+        loadCompanies()
     }
 
 
