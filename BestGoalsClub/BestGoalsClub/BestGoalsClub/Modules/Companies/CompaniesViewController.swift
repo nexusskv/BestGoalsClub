@@ -9,14 +9,12 @@
 import UIKit
 
 class CompaniesViewController: UIViewController {
-    @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var companiesTable: UITableView!
     @IBOutlet weak var sortView: SortCompaniesView!
     var dataArray: [CompanyObject] = []
     var originalDataArray: [CompanyObject] = []
     var selectedSortType: CompaniesSortTypes = .none
-    
-    
+        
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -21,4 +21,17 @@ class ButtonStateChanger {
             button.setBackgroundImage(UIImage(named: "favourite_icon"), for: .normal)
         }
     }
+    
+    func cleanCheckmarks(_ buttons: [UIButton]) {
+        for button in buttons {
+            button.setBackgroundImage(UIImage(named: "no_checkmark_icon"), for: .normal)
+        }
+    }
+    
+    func addSortCheckmark(_ view: UIView, type: Int) {
+        if let button = view.viewWithTag(type) as? UIButton {
+            button.setBackgroundImage(UIImage(named: "checkmark_icon"),
+                                      for: .normal)
+        }
+    }
 }

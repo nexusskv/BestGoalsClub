@@ -1,5 +1,5 @@
 //
-//  SortCompaniesView+Checkmarks.swift
+//  SortMembersView+Checkmarks.swift
 //  BestGoalsClub
 //
 //  Created by Rost on 11.12.2019.
@@ -10,15 +10,14 @@ import Foundation
 import UIKit
 
 
-extension SortCompaniesView {
+extension SortMembersView {
     
     func cleanCheckmarks() {
-        let buttons = [ascButton, descButton]
+        let buttons = [ageAscButton, ageDescButton, nameAscButton, nameDescButton]
         ButtonStateChanger.shared.cleanCheckmarks(buttons as! [UIButton])
     }
-
     
-    func addCheckmarks(_ type: CompaniesSortTypes) {
+    func addCheckmarks(_ type: MembersSortTypes) {
         ButtonStateChanger.shared.addSortCheckmark(self, type: type.rawValue)
     }
 }

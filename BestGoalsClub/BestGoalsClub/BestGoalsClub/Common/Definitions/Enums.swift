@@ -43,9 +43,11 @@ enum FinalActionsTypes: Int {
 
 enum MembersSortTypes: Int {
     case none = 0
-    case namesAsc
-    case namesDesc
     case ageAsc
     case ageDesc
+    case nameAsc
+    case nameDesc
+    case lastNameAsc
+    case lastNameDesc
 }
 

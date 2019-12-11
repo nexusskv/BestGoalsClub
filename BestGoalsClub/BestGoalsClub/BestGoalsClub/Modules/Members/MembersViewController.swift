@@ -10,7 +10,10 @@ import UIKit
 
 class MembersViewController: UIViewController {
     @IBOutlet weak var membersTable: UITableView!
+    @IBOutlet weak var sortView: SortMembersView!
     var dataArray: [MemberObject] = []
+    var originalDataArray: [MemberObject] = []
+    var selectedSortType: MembersSortTypes = .none
     
     
     override func viewDidLoad() {

@@ -11,14 +11,21 @@ import UIKit
 
 
 extension MembersViewController {
-    
+
     
     @IBAction func favouriteButtonTapped(_ sender: UIButton) {
-        var member = dataArray[sender.tag]
-        member.isFavorite = !member.isFavorite
-        
-        dataArray[sender.tag] = member
-        
-        membersTable.reloadData()
+        changeMemberParams(sender.tag)
+    }
+    
+    @IBAction func sortMembersButtonTapped(_ sender: UIButton) {
+        sortActionHandler(sender.tag)
+    }
+    
+    @IBAction func confirmActionButtonTapped(_ sender: UIButton) {
+        confirmActionHandler(sender.tag)
+    }
+       
+    @IBAction func showSortView() {
+        displaySortView()
     }
 }

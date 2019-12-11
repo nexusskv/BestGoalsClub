@@ -31,7 +31,7 @@ extension CompaniesViewController {
         
         dataArray[index] = object
         
-        if let index = originalDataArray.firstIndex(where: { $0.company == object.company }) {
+        if let index = originalDataArray.firstIndex(where: { $0.objectId == object.objectId }) {
             originalDataArray[index] = object
         }
         
@@ -64,7 +64,7 @@ extension CompaniesViewController {
         }
     }
     
-    func finalActionHandler(_ value: Int) {
+    func confirmActionHandler(_ value: Int) {
         if let type = FinalActionsTypes(rawValue: value) {
             switch type {
                 case .close:
@@ -108,5 +108,14 @@ extension CompaniesViewController {
         }
         
         companiesTable.reloadData()
+    }
+    
+    func displaySortView() {
+        if sortView.alpha > 0.0 {
+            sortView.fadeOut()
+        } else {
+            sortView.fadeIn()
+            sortView.addCheckmarks(sortView.sortType)
+        }
     }
 }

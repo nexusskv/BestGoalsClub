@@ -24,17 +24,11 @@ extension CompaniesViewController {
         sortActionHandler(sender.tag)
     }
     
-    @IBAction func finalActionButtonTapped(_ sender: UIButton) {
-        finalActionHandler(sender.tag)
+    @IBAction func confirmActionButtonTapped(_ sender: UIButton) {
+        confirmActionHandler(sender.tag)
     }
        
     @IBAction func showSortView() {
-        if sortView.alpha > 0.0 {
-            sortView.fadeOut()
-        } else {
-            sortView.fadeIn()
-            sortView.addCheckmarks(sortView.sortType)
-            
-        }
+        displaySortView()
     }
 }
