@@ -38,4 +38,13 @@ extension MembersViewController {
         
         membersTable.reloadData()
     }
+    
+    func presentDetails(_ index: IndexPath) {
+        let selectedMember = dataArray[index.row]
+        
+        DataContainer.shared.selectedType   = .member
+        DataContainer.shared.selectedObject = selectedMember as AnyObject
+        
+        Router.present("Details", from: self)
+    }
 }

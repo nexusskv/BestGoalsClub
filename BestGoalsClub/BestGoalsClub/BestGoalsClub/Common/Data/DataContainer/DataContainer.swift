@@ -14,4 +14,7 @@ class DataContainer {
     private init() { }
     
     var allMembers: [MemberObject]?
+    
+    var selectedObject: AnyObject?
+    var selectedType: DetailsTypes = .none
 }

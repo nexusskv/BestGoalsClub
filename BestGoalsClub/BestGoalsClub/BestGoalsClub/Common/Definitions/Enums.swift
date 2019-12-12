@@ -51,3 +51,14 @@ enum MembersSortTypes: Int {
     case lastNameDesc
 }
 
+enum DetailsTypes: Int {
+    case none = 0
+    case company
+    case member
+}
+
+enum DetailsCompanyRows: Int {
+    case general = 0
+    case members
+    case about
+}

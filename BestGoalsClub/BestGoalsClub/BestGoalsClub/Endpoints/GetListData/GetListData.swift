@@ -25,8 +25,9 @@ class GetListData {
         
         let task = session.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
             guard let data = data, error == nil else {
-                completion!(error as AnyObject)
-                
+                DispatchQueue.main.async {
+                    completion!(error?.localizedDescription as AnyObject)
+                }
                 return
             }
             

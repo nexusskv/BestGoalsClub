@@ -53,4 +53,13 @@ extension CompaniesViewController {
             }
         }
     }
+    
+    func presentDetails(_ index: IndexPath) {
+        let selectedCompany = dataArray[index.row]
+        
+        DataContainer.shared.selectedType   = .company
+        DataContainer.shared.selectedObject = selectedCompany as AnyObject
+        
+        Router.present("Details", from: self)
+    }
 }

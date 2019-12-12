@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class MembersViewController: UIViewController {
     @IBOutlet weak var membersTable: UITableView!
     @IBOutlet weak var sortView: SortMembersView!
@@ -21,7 +22,5 @@ class MembersViewController: UIViewController {
         
         setupUI()
     }
-
-
 }
 
