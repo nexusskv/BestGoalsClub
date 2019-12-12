@@ -15,7 +15,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var navigationBar: UINavigationBar!
     var selectedType: DetailsTypes = .none
 
-    
+    /// ---> View life cycle <--- ///
     override func viewDidLoad() {
         super.viewDidLoad()
         

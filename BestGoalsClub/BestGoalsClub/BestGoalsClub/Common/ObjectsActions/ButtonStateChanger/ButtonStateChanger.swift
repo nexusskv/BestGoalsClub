@@ -14,6 +14,7 @@ class ButtonStateChanger {
     static let shared = ButtonStateChanger()
     private init() { }
     
+    /// ---> Function for change state of favorite button <--- ///
     func changeFavouriteState(_ button: UIButton, flag: Bool) {
         if !flag {
             button.setBackgroundImage(UIImage(named: "no_favourite_icon"), for: .normal)
@@ -22,6 +23,8 @@ class ButtonStateChanger {
         }
     }
     
+    
+    /// ---> Function for reset all checkmark buttons on some view <--- ///
     func cleanCheckmarks(_ tags: [Int], on view: UIView) {
         for tag in tags {
             if let button = view.viewWithTag(tag) as? UIButton {
@@ -31,6 +34,8 @@ class ButtonStateChanger {
 
     }
     
+    
+    /// ---> Function mark some checkmark button <--- ///
     func addSortCheckmark(_ view: UIView, type: Int) {
         if let button = view.viewWithTag(type) as? UIButton {
             button.setBackgroundImage(UIImage(named: "checkmark_icon"),

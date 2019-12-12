@@ -9,4 +9,5 @@
 import Foundation
 
 
+/// ---> Url for download data from API <--- ///
 let dataUrl = "https://next.json-generator.com/api/json/get/Vk-LhK44U"

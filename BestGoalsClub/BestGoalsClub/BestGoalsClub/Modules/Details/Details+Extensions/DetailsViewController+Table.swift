@@ -12,7 +12,7 @@ import UIKit
 
 extension DetailsViewController: UITableViewDataSource, UITableViewDelegate {
         
-    /// ---> Table view data source methods <--- ///
+    /// ---> Table view data source and delegate methods <--- ///
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = makeCell(tableView, at: indexPath)
 

@@ -11,7 +11,7 @@ import Foundation
 
 extension MemberObject: Decodable {
     
-    
+    /// ---> Function decode all properties from json container <--- ///
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: MemberCodingKeys.self)
         if let value = try values.decodeIfPresent(String.self, forKey: .objectId) {

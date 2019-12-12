@@ -11,15 +11,12 @@ import UIKit
 
 
 extension CompaniesViewController: UITableViewDataSource, UITableViewDelegate {
-        
-    /// ---> Table view data source methods <--- ///
+            
+    /// ---> Table view data source and delegate functions <--- ///
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CompanyCell", for: indexPath) as? CompanyCell
-        
-        let company: CompanyObject = dataArray[indexPath.row]        
-        cell?.setCellValues(company, index: indexPath.row)
+        let cell = makeCell(tableView, at: indexPath)
 
-        return cell ?? CompanyCell()
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

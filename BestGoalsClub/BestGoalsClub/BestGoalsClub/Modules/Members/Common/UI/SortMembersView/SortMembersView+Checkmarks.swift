@@ -12,12 +12,15 @@ import UIKit
 
 extension SortMembersView {
     
+    /// ---> Function reset all checkmark buttons <--- ///
     func cleanCheckmarks() {
         let tags: [Int] = [MembersSortTypes.ageAsc.rawValue, MembersSortTypes.ageDesc.rawValue, MembersSortTypes.nameAsc.rawValue, MembersSortTypes.nameDesc.rawValue, MembersSortTypes.lastNameAsc.rawValue, MembersSortTypes.lastNameDesc.rawValue]
                 
         ButtonStateChanger.shared.cleanCheckmarks(tags, on: self)
     }
     
+    
+    /// ---> Function for mark some checkmark button <--- ///
     func addCheckmarks(_ type: MembersSortTypes) {
         ButtonStateChanger.shared.addSortCheckmark(self, type: type.rawValue)
     }

@@ -13,8 +13,8 @@ class DataContainer {
     static let shared = DataContainer()
     private init() { }
     
-    var allMembers: [MemberObject]?
+    var allMembers: [MemberObject]?             // List of all members
     
-    var selectedObject: AnyObject?
-    var selectedType: DetailsTypes = .none
+    var selectedObject: AnyObject?              // Object for details view
+    var selectedType: DetailsTypes = .none      // Type of object for details view
 }

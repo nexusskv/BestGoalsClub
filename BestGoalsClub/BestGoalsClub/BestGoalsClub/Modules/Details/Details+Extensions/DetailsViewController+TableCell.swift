@@ -12,6 +12,7 @@ import UIKit
 
 extension DetailsViewController {
     
+    /// ---> Function for make custom heights of cells based on index of row <--- ///
     func makeCellHeight(_ index: IndexPath) -> CGFloat {
         switch selectedType {
             case .member:
@@ -34,6 +35,8 @@ extension DetailsViewController {
         return 0.0
     }
     
+    
+    /// ---> Function make counts based on selected type of object <--- ///
     func makeRowsCount() -> Int {
         switch selectedType {
             case .member:
@@ -45,6 +48,8 @@ extension DetailsViewController {
         }
     }
         
+    
+    /// ---> Function for make custom cells based on index of row  <--- ///
     func makeCell(_ table: UITableView, at index: IndexPath) -> UITableViewCell {
         switch selectedType {
             case .member:

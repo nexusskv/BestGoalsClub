@@ -12,15 +12,11 @@ import UIKit
 
 extension MembersViewController: UITableViewDataSource, UITableViewDelegate {
         
-    /// ---> Table view data source methods <--- ///
+    /// ---> Table view data source and delegate functions <--- ///
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MemberCell", for: indexPath) as? MemberCell
-        
-        let member: MemberObject = dataArray[indexPath.row]
-        
-        cell?.setCellValues(member, index: indexPath.row)
+        let cell = makeCell(tableView, at: indexPath)
 
-        return cell ?? MemberCell()
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

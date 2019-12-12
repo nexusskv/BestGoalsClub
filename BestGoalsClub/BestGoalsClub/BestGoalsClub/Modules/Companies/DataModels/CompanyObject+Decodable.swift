@@ -11,7 +11,7 @@ import Foundation
 
 extension CompanyObject: Decodable {
     
-    
+    /// ---> Function decode all properties from json container <--- ///
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CompanyCodingKeys.self)
         if let value = try values.decodeIfPresent(String.self, forKey: .objectId) {

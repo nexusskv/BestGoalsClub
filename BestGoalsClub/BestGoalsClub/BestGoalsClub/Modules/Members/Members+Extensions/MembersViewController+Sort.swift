@@ -12,6 +12,7 @@ import UIKit
 
 extension MembersViewController {
     
+    /// ---> Function for display a view with types of sort  <--- ///
     func displaySortView() {
         if sortView.alpha > 0.0 {
             sortView.fadeOut()
@@ -21,6 +22,8 @@ extension MembersViewController {
         }
     }
     
+    
+    /// ---> Function for processing a select sort buttons  <--- ///
     func sortActionHandler(_ value: Int) {
         if let type = MembersSortTypes(rawValue: value) {
             sortView.cleanCheckmarks()
@@ -31,6 +34,8 @@ extension MembersViewController {
         }
     }
     
+    
+    /// ---> Function for processing a select ok/close buttons  <--- ///
     func confirmActionHandler(_ value: Int) {
         if let type = FinalActionsTypes(rawValue: value) {
             switch type {
@@ -54,6 +59,8 @@ extension MembersViewController {
         }
     }
     
+    
+    /// ---> Function for processing a sort data by selected type  <--- ///
     func sortMembers(_ type: MembersSortTypes) {
         switch type {
             case .ageAsc:
@@ -75,6 +82,8 @@ extension MembersViewController {
         membersTable.reloadData()
     }
     
+    
+    /// ---> Function for restore start data <--- ///
     func restoreAllMembers() {
         dataArray = originalDataArray
         

@@ -16,7 +16,7 @@ class MembersViewController: UIViewController {
     var originalDataArray: [MemberObject] = []
     var selectedSortType: MembersSortTypes = .none
     
-    
+    /// ---> View life cycle  <--- ///
     override func viewDidLoad() {
         super.viewDidLoad()
         

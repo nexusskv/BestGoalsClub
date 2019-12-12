@@ -12,10 +12,13 @@ import UIKit
 
 extension DetailsViewController {
     
+    /// ---> Function for UI customisations <--- ///
     func setupUI() {
         detailsTable.tableFooterView = UIView()
     }
     
+    
+    /// ---> Function for set data source <--- ///
     func setupDataSource() {
         if DataContainer.shared.selectedType != .none {
             selectedType = DataContainer.shared.selectedType
@@ -26,6 +29,8 @@ extension DetailsViewController {
         }
     }
     
+    
+    /// ---> Function make title of view controller <--- ///
     func makeDetailsTitle() {
         switch selectedType {
             case .company:

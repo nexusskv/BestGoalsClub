@@ -12,6 +12,7 @@ import UIKit
 
 extension DetailsViewController {
     
+    /// ---> Action for back item in the navigation bar <--- ///
     @IBAction func backItemTapped() {
         Router.dismiss(self)
     }

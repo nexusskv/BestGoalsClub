@@ -1,8 +1,8 @@
 //
-//  CompaniesViewController+Search.swift
+//  CompaniesViewController+SearchHandlers.swift
 //  BestGoalsClub
 //
-//  Created by Rost on 11.12.2019.
+//  Created by Rost on 12.12.2019.
 //  Copyright © 2019 Rost Gress. All rights reserved.
 //
 
@@ -10,24 +10,14 @@ import Foundation
 import UIKit
 
 
-extension CompaniesViewController: UISearchBarDelegate {
-
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.text = nil
-        searchBar.resignFirstResponder()
-        
-        restoreAllCompanies()
-    }
+extension CompaniesViewController {
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()        
-    }
-
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.count > 0 {
+    /// ---> Function for processing a search string  <--- ///
+    func handleSearch(_ value: String) {
+        if value.count > 0 {
             dataArray = originalDataArray.filter({ (company) -> Bool in
                 let name: NSString = company.company as NSString
-                let range = name.range(of: searchText, options: .caseInsensitive)
+                let range = name.range(of: value, options: .caseInsensitive)
                 
                 return range.location != NSNotFound
             })
@@ -40,5 +30,14 @@ extension CompaniesViewController: UISearchBarDelegate {
         }
 
         companiesTable.reloadData()
+    }
+    
+    
+    /// ---> Function for processing a search cancel button  <--- ///
+    func handleSearchCancel(_ bar: UISearchBar) {
+        bar.text = nil
+        bar.resignFirstResponder()
+        
+        restoreAllCompanies()
     }
 }

@@ -12,6 +12,7 @@ import UIKit
 
 extension CompaniesViewController {
     
+    /// ---> Function for display a view with types of sort  <--- ///
     func displaySortView() {
         if sortView.alpha > 0.0 {
             sortView.fadeOut()
@@ -21,6 +22,8 @@ extension CompaniesViewController {
         }
     }
     
+    
+    /// ---> Function for processing a select sort buttons  <--- ///
     func sortActionHandler(_ value: Int) {
         if let type = CompaniesSortTypes(rawValue: value) {
             sortView.cleanCheckmarks()
@@ -31,6 +34,8 @@ extension CompaniesViewController {
         }
     }
     
+    
+    /// ---> Function for processing a select ok/close buttons  <--- ///
     func confirmActionHandler(_ value: Int) {
         if let type = FinalActionsTypes(rawValue: value) {
             switch type {
@@ -54,6 +59,8 @@ extension CompaniesViewController {
         }
     }
     
+    
+    /// ---> Function for processing a sort data by selected type  <--- ///
     func sortCompanies(_ type: CompaniesSortTypes) {
         switch type {
             case .asc:
@@ -67,6 +74,8 @@ extension CompaniesViewController {
         companiesTable.reloadData()
     }
     
+    
+    /// ---> Function for restore start data <--- ///
     func restoreAllCompanies() {
         dataArray = originalDataArray
         

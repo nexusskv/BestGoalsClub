@@ -12,27 +12,14 @@ import UIKit
 
 extension CompaniesViewController {
     
-    
+    /// ---> Function for download data source from server API <--- ///
     func loadCompanies() {
         GetListData.loadList(dataUrl, completion: { [weak self] result in
             guard let strongSelf = self else {
               return
             }
             
-            if result is [CompanyObject] {
-                if let companies = result as? [CompanyObject] {
-                    strongSelf.dataArray            = companies
-                    strongSelf.originalDataArray    = companies
-                    
-                    strongSelf.companiesTable.reloadData()
-                                        
-                    strongSelf.makeMembersArray()
-                } else {
-                    AlertPresenter.showAlert(strongSelf, message: "You received empty array of data.")
-                }
-            } else if result is String {
-                AlertPresenter.showAlert(strongSelf, message: result as! String)
-            }
+            strongSelf.handleLoadedResult(result)
         })        
     }
 }

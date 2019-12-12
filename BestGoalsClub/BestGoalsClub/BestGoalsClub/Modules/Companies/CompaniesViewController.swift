@@ -15,7 +15,7 @@ class CompaniesViewController: UIViewController {
     var originalDataArray: [CompanyObject] = []
     var selectedSortType: CompaniesSortTypes = .none
         
-    
+    /// ---> View life cycle  <--- ///
     override func viewDidLoad() {
         super.viewDidLoad()
         

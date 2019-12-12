@@ -16,18 +16,22 @@ class SortMembersView: UIView {
     
     var sortType: MembersSortTypes = .none
 
-
+    /// ---> Constructor function <--- ///
     required init?(coder aDecoder: NSCoder) {
       super.init(coder: aDecoder)
 
     }
     
+    
+    /// ---> View life cycle <--- ///
     override func awakeFromNib() {
         super.awakeFromNib()
         
         setupUI()
     }
     
+    
+    /// ---> Function for UI customisations <--- ///
     private func setupUI() {
         self.roundCorners(12, border: 2.5, color: .darkGray)
         if let button = okButton {
