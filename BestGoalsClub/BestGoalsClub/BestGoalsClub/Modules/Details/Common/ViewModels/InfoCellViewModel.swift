@@ -1,22 +1,22 @@
 //
-//  InfoCell+UISetter.swift
+//  InfoCellViewModel.swift
 //  BestGoalsClub
 //
-//  Created by Rost on 12.12.2019.
-//  Copyright © 2019 Rost Gress. All rights reserved.
+//  Created by Rost on 28.01.2020.
+//  Copyright © 2020 Rost Gress. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
 
-extension InfoCell {
+class InfoCellViewModel {
     
     /// ---> Function for set values to UI from object <--- ///
-    func setCellValues(_ object: CompanyObject, type: DetailsCompanyRows) {
+    func setCellValues(_ cell: InfoCell, object: CompanyObject, type: DetailsCompanyRows) {
         switch type {
             case .members:
-                infoTitle.text = "Members of company:"
+                cell.infoTitle.text = "Members of company:"
                 var membersNames = String()
 
                 for i in 0 ..< object.members.count {
@@ -29,10 +29,10 @@ extension InfoCell {
                     }
                 }
                 
-                infoText.text = membersNames
+                cell.infoText.text = membersNames
             case .about:
-                infoTitle.text  = "About:"
-                infoText.text   = object.about
+                cell.infoTitle.text  = "About:"
+                cell.infoText.text   = object.about
             case .general:
                 break
         }

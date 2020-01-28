@@ -16,4 +16,12 @@ class MembersDetailsCell: UITableViewCell {
     @IBOutlet weak var memberEmail: UILabel!
     @IBOutlet weak var memberPhone: UILabel!
     @IBOutlet weak var favImageView: UIImageView!
+    var viewModel: MembersDetailsCellViewModel!
+    
+    /// ---> Cell life cycle <--- ///
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        viewModel = MembersDetailsCellViewModel()
+    }
 }

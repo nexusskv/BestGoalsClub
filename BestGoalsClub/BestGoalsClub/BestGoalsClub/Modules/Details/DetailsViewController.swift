@@ -14,17 +14,20 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var detailsTable: UITableView!
     @IBOutlet weak var navigationBar: UINavigationBar!
     var selectedType: DetailsTypes = .none
+    var viewModel: DetailsViewModel!
 
     /// ---> View life cycle <--- ///
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
+        viewModel = DetailsViewModel()
+        
+        viewModel.setupUI(self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        setupDataSource()
+        viewModel.setupDataSource(self)
     }
 }

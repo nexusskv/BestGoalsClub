@@ -16,5 +16,13 @@ class CompanyCell: UITableViewCell {
     @IBOutlet weak var followersNumber: UILabel!
     @IBOutlet weak var followButton: UIButton!
     @IBOutlet weak var favouriteButton: UIButton!
+    var viewModel: CompanyCellViewModel!
+    
+    /// ---> View life cycle <--- ///
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        viewModel = CompanyCellViewModel()
+    }
 }
 

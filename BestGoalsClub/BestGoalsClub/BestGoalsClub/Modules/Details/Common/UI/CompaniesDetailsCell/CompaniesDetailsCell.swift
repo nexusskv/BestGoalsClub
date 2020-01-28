@@ -16,10 +16,13 @@ class CompaniesDetailsCell: UITableViewCell {
     @IBOutlet weak var companyWeb: UILabel!
     @IBOutlet weak var companyFollowers: UILabel!
     @IBOutlet weak var favImageView: UIImageView!
+    var viewModel: CompaniesDetailsCellViewModel!
     
     /// ---> Cell life cycle <--- ///
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        viewModel = CompaniesDetailsCellViewModel()
         
         setupUI()
     }

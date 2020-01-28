@@ -15,12 +15,19 @@ class MembersViewController: UIViewController {
     var dataArray: [MemberObject] = []
     var originalDataArray: [MemberObject] = []
     var selectedSortType: MembersSortTypes = .none
+    var viewModel: MembersViewModel!
+    var sortManager: MembersSortManager!
+    var searchManager: MembersSearchManager!
     
     /// ---> View life cycle  <--- ///
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
+        viewModel       = MembersViewModel()
+        sortManager     = MembersSortManager()
+        searchManager   = MembersSearchManager()
+        
+        viewModel.setupUI(self)
     }
 }
 

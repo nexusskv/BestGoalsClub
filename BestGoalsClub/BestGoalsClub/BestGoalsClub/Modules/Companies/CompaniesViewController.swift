@@ -14,14 +14,23 @@ class CompaniesViewController: UIViewController {
     var dataArray: [CompanyObject] = []
     var originalDataArray: [CompanyObject] = []
     var selectedSortType: CompaniesSortTypes = .none
-        
+    var viewModel: CompaniesViewModel!
+    var sortManager: SortManager!
+    var searchManager: SearchManager!
+    var endpointsManager: EndpointsManager!
+    
     /// ---> View life cycle  <--- ///
     override func viewDidLoad() {
         super.viewDidLoad()
+                
+        viewModel           = CompaniesViewModel()
+        sortManager         = SortManager()
+        searchManager       = SearchManager()
+        endpointsManager    = EndpointsManager()
         
-        setupUI()
+        viewModel.setupUI(self)
         
-        loadCompanies()
+        endpointsManager.loadCompanies(self)
     }
 
 

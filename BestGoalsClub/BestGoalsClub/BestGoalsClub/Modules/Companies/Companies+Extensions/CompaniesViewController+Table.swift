@@ -14,7 +14,7 @@ extension CompaniesViewController: UITableViewDataSource, UITableViewDelegate {
             
     /// ---> Table view data source and delegate functions <--- ///
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = makeCell(tableView, at: indexPath)
+        let cell = viewModel.makeCell(tableView, array: dataArray, index: indexPath)
 
         return cell
     }
@@ -30,6 +30,6 @@ extension CompaniesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        presentDetails(indexPath)
+        viewModel.presentDetails(self, index: indexPath)
     }
 }

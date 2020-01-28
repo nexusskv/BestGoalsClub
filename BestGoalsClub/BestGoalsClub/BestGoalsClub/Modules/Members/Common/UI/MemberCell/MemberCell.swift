@@ -14,4 +14,12 @@ class MemberCell: UITableViewCell {
     @IBOutlet weak var memberName: UILabel!
     @IBOutlet weak var memberAge: UILabel!
     @IBOutlet weak var favouriteButton: UIButton!
+    var viewModel: MemberCellViewModel!
+    
+    /// ---> View life cycle <--- ///
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        viewModel = MemberCellViewModel()
+    }
 }

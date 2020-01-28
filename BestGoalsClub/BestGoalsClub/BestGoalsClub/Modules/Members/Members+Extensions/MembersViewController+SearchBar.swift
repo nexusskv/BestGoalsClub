@@ -14,7 +14,7 @@ extension MembersViewController: UISearchBarDelegate {
 
     /// ---> Search bar delegate functions <--- ///
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        handleSearchCancel(searchBar)
+        searchManager.handleSearchCancel(self, bar: searchBar)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -22,6 +22,6 @@ extension MembersViewController: UISearchBarDelegate {
     }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        handleSearch(searchText)
+        searchManager.handleSearch(self, value: searchText)
     }
 }

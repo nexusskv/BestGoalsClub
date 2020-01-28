@@ -13,10 +13,13 @@ import UIKit
 class InfoCell: UITableViewCell {
     @IBOutlet weak var infoTitle: UILabel!
     @IBOutlet weak var infoText: UITextView!
-
+    var viewModel: InfoCellViewModel!
+    
     /// ---> Cell lifecycle <--- ///
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        viewModel = InfoCellViewModel()
         
         setupUI()
     }

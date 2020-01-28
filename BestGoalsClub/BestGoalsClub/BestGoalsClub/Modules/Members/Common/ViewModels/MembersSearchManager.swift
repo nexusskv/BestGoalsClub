@@ -1,21 +1,21 @@
 //
-//  MembersViewController+Search.swift
+//  MembersSearchManager.swift
 //  BestGoalsClub
 //
-//  Created by Rost on 12.12.2019.
-//  Copyright © 2019 Rost Gress. All rights reserved.
+//  Created by Rost on 28.01.2020.
+//  Copyright © 2020 Rost Gress. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
 
-extension MembersViewController {
+class MembersSearchManager {
     
     /// ---> Function for processing a search string  <--- ///
-    func handleSearch(_ value: String) {
+    func handleSearch(_ view: MembersViewController, value: String) {
         if value.count > 0 {
-            dataArray = originalDataArray.filter({ (member) -> Bool in
+            view.dataArray = view.originalDataArray.filter({ (member) -> Bool in
                 let name: NSString = member.firstName as NSString
                 let nameRange = name.range(of: value, options: .caseInsensitive)
                 
@@ -26,22 +26,28 @@ extension MembersViewController {
                         lastNameRange.location != NSNotFound
             })
             
-            if selectedSortType != .none {
-                sortMembers(selectedSortType)
+            if view.selectedSortType != .none {
+                if let manager = view.sortManager {
+                    manager.sortMembers(view, type: view.selectedSortType)
+                }
             }
         } else {
-            restoreAllMembers()
+            if let manager = view.sortManager {
+                manager.restoreAllMembers(view)
+            }
         }
 
-        membersTable.reloadData()
+        view.membersTable.reloadData()
     }
     
     
     /// ---> Function for processing a search cancel button  <--- ///
-    func handleSearchCancel(_ bar: UISearchBar) {
+    func handleSearchCancel(_ view: MembersViewController, bar: UISearchBar) {
         bar.text = nil
         bar.resignFirstResponder()
         
-        restoreAllMembers()
+        if let manager = view.sortManager {
+            manager.restoreAllMembers(view)
+        }
     }
 }

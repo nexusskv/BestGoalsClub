@@ -14,30 +14,30 @@ extension CompaniesViewController {
     
     /// ---> Action for follow button  <--- ///
     @IBAction func followButtonTapped(_ sender: UIButton) {
-        changeCompanyParams(sender.tag, by: .follower)
+        viewModel.changeCompanyParams(self, index: sender.tag, type: .follower)
     }
     
     
     /// ---> Action for favorite button  <--- ///
     @IBAction func favouriteButtonTapped(_ sender: UIButton) {
-        changeCompanyParams(sender.tag, by: .favourite)
+        viewModel.changeCompanyParams(self, index: sender.tag, type: .favourite)
     }
     
     
     /// ---> Actions for types of sort buttons  <--- ///
     @IBAction func sortCompaniesButtonTapped(_ sender: UIButton) {
-        sortActionHandler(sender.tag)
+        sortManager.sortActionHandler(self, value: sender.tag)
     }
     
     
     /// ---> Function for ok/close buttons  <--- ///
     @IBAction func confirmActionButtonTapped(_ sender: UIButton) {
-        confirmActionHandler(sender.tag)
+        sortManager.confirmActionHandler(self, value: sender.tag)
     }
     
     
     /// ---> Function for sort item in the navigation bar  <--- ///
     @IBAction func showSortView() {
-        displaySortView()
+        sortManager.displaySortView(self)
     }
 }
